@@ -4,7 +4,7 @@ const pool = require('../Database/config');
 const db = require('../Database/index');
 /**
  *
- * @Todo : create a student
+ * @Todo : Register a student on DB
  *
  */
 exports.studController = async (req, res) => {

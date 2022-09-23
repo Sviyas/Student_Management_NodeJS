@@ -1,6 +1,7 @@
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
+//  view all department on IT_Team
 exports.DepartmentList = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);

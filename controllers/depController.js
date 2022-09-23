@@ -3,7 +3,7 @@ const db = require('../Database/index');
 
 /**
  *
- * @Todo : create a department
+ * @Todo : create a department and alos registering on DB
  *
  */
 

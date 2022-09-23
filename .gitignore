@@ -1,10 +1,11 @@
+### vscode files
+/.vscode
+
 ### nodu module files
 /node_modules
 
-
 ### request files
 /request
-
 
 ### env file
 .env

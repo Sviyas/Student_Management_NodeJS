@@ -1,7 +1,7 @@
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
-//  Register Attendance Table
+//  Register Attendance Table  on DB
 exports.atteController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -32,7 +32,7 @@ exports.atteController = async (req, res) => {
   }
 };
 
-//  get student details
+//  get student details on DB
 exports.studentDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -59,7 +59,7 @@ exports.studentDetail = async (req, res) => {
   }
 };
 
-//  delete student info
+//  delete student info on DB
 exports.deleteStud = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -83,7 +83,7 @@ exports.deleteStud = async (req, res) => {
   }
 };
 
-// get staff info
+// get staff info on DB
 exports.staffDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -107,7 +107,7 @@ exports.staffDetail = async (req, res) => {
   }
 };
 
-//  delete staff info
+//  delete staff info DB
 exports.deleteStaff = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);

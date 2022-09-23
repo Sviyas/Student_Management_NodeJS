@@ -1,6 +1,8 @@
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
+//  Register staff details on DB
+
 exports.staffController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);

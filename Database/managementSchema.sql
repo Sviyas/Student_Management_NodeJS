@@ -1,3 +1,5 @@
+-- student management sql queries 
+
 --  IT Team table
 create table it_team
 (

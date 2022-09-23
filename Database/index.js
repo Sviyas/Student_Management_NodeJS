@@ -1,4 +1,9 @@
-// list of all poolCoonection perform the task what we need
+/**
+ *
+ * @param {*} pool
+ * @returns  list of all poolCoonection is used to indicate each condition performing similar tasks
+ *            to save time and less code for this project
+ */
 
 //  get a pool connection
 exports.poolConnect = pool => {
