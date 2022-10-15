@@ -21,7 +21,7 @@ exports.staffController = async (req, res) => {
           attendance_id: 1
         }
       });
-      return res.status(200).json({
+      return res.status(201).json({
         result: true,
         message: 'Staff data was added ✌️',
         data: {

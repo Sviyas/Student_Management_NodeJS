@@ -22,7 +22,7 @@ exports.departmentRegister = async (req, res) => {
           it_team_id: 1
         }
       });
-      return res.status(200).json({
+      return res.status(201).json({
         result: true,
         message: 'successfully added into database...',
         data: {

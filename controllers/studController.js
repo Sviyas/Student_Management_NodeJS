@@ -2,6 +2,8 @@
 const pool = require('../Database/config');
 // get a connection from database
 const db = require('../Database/index');
+// using bcrypt to hashing and salting
+const bcrypt = require('bcrypt');
 /**
  *
  * @Todo : Register a student on DB
@@ -10,9 +12,15 @@ const db = require('../Database/index');
 exports.studController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
+    // console.log(connection);
     try {
       const { id, name, standard, email, phone, passcode, address, stud_sub, stud_attendance } = req.body;
 
+      // before save password , the password must be authenticate
+      const salt = await bcrypt.genSalt(10);
+      // password in salting between 10 rounds
+      const myPassword = await bcrypt.hash(passcode, salt);
+      // hashing and storing password on db
       const studRegister = await db.insertOne(connection, {
         table_name: 'student',
         data: {
@@ -21,7 +29,7 @@ exports.studController = async (req, res) => {
           standard,
           email,
           phone,
-          passcode,
+          passcode: myPassword,
           address,
           stud_sub,
           stud_attendance,
@@ -29,7 +37,7 @@ exports.studController = async (req, res) => {
         }
       });
 
-      return res.status(200).json({
+      return res.status(201).json({
         result: true,
         message: 'Thank you for Registering student websitee... 😍😍',
         data: {
@@ -42,5 +50,47 @@ exports.studController = async (req, res) => {
     }
   } catch (err) {
     if (err) throw err;
+  }
+};
+
+exports.studLoginController = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+    try {
+      const { email, passcode } = req.body;
+
+      if (!email || !passcode || (!email && !passcode)) {
+        return res.status(401).json('Invalid request Please try again');
+      }
+
+      const students = await db.getOne(connection, {
+        table_name: 'student ',
+        projection: ' email, passcode',
+        condition: `email = ? `,
+        value: [email]
+      });
+
+      if (!students.length) return res.status(401).json('Invalid Email');
+      // console.log(students); // show students email & passcode
+      const is_correct = await bcrypt.compare(passcode, students[0].passcode);
+      //console.log(is_correct); // verify students passcode and return true or false
+
+      if (!is_correct) {
+        return res.status(401).json('wrong password');
+      }
+      return res.status(200).json({
+        result: true,
+        message: 'login successfull...',
+        data: {
+          users: students
+        }
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    if (err) {
+      throw err;
+    }
   }
 };

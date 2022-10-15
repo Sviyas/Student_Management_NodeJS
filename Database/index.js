@@ -18,6 +18,7 @@ exports.poolConnect = pool => {
 
 // get a all data from given table
 exports.getOne = (connection, options) => {
+  console.log(options);
   return new Promise((resolve, reject) => {
     connection.query(
       `SELECT ${options.projection} FROM ${options.table_name} WHERE ${options.condition}`,
@@ -32,7 +33,7 @@ exports.getOne = (connection, options) => {
 
 //  inset a data to database
 exports.insertOne = (connection, options) => {
-  console.log(options);
+  // console.log(options);
   return new Promise((resolve, reject) => {
     connection.query(`INSERT INTO ${options.table_name} SET ?`, options.data, (err, results) => {
       if (err) return reject(err);
@@ -43,7 +44,7 @@ exports.insertOne = (connection, options) => {
 
 //  Delete the data into database
 exports.deleteOne = (connection, options) => {
-  console.log(options);
+  // console.log(options);
   return new Promise((resolve, reject) => {
     connection.query(`DELETE FROM ${options.table_name} WHERE ${options.condition}`, options.value, (err, result) => {
       if (err) return reject(err);

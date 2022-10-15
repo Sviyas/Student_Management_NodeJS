@@ -5,6 +5,8 @@ const app = express();
 const { config } = require('dotenv');
 config();
 
+// console.log('config :', config);
+
 //  all routers files
 const index = require('./routes/index');
 const ITTeam = require('./routes/it');

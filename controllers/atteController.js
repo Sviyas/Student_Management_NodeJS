@@ -16,7 +16,7 @@ exports.atteController = async (req, res) => {
           department_id: 1
         }
       });
-      return res.status(200).json({
+      return res.status(201).json({
         result: true,
         message: 'Successfully added into database',
         data: {
@@ -71,7 +71,7 @@ exports.deleteStud = async (req, res) => {
         value: [req.params.id]
       });
 
-      return res.status(200).json({
+      return res.status(202).json({
         result: true,
         message: 'Student data has been Deleted Successfully'
       });
