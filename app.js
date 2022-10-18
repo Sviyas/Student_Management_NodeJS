@@ -18,6 +18,7 @@ const staff = require('./routes/staff');
 // middleware
 app.use(express.json({ extended: true }));
 
+// console.dir('dir:', app.locals.title);
 // api's
 app.use('/school/dashboard', index);
 app.use('/school/IT', ITTeam);

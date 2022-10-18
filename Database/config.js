@@ -21,7 +21,7 @@ const pool = mysql.createPool({
   database: DB_NAME,
   acquireTimeout: 20000,
   multipleStatements: true,
-  connectionLimit: 100,
+  connectionLimit: 5,
   charset: 'utf8mb4',
   debug: false
 });
