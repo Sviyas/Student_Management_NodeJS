@@ -6,7 +6,7 @@
 -- Department
 -- Staff
 -- Students
--- further will added on future ✌️🤗🤩
+-- further will be added on future ✌️🤗🤩
 
 --------------------------------------------------------------------------------------------;
 -- IT team will show the departments

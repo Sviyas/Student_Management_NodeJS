@@ -5,7 +5,8 @@ const app = express();
 const { config } = require('dotenv');
 config();
 
-// console.log('config :', config);
+// console.log('config :', config()); // log inside config file
+// console.log('app :', app); // log app inside functions
 
 //  all routers files
 const index = require('./routes/index');
@@ -18,7 +19,6 @@ const staff = require('./routes/staff');
 // middleware
 app.use(express.json({ extended: true }));
 
-// console.dir('dir:', app.locals.title);
 // api's
 app.use('/school/dashboard', index);
 app.use('/school/IT', ITTeam);
@@ -27,7 +27,7 @@ app.use('/school/Attendance', attendance);
 app.use('/school/Student', student);
 app.use('/school/Staff', staff);
 
-// server
+// server listening the port
 app.listen(3000, () => {
   console.log('server Started ...!');
 });

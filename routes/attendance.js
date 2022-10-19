@@ -4,12 +4,16 @@ const {
   studentDetail,
   deleteStud,
   deleteStaff,
-  staffDetail
+  staffDetail,
+  attendanceDelte
 } = require('../controllers/atteController');
 const router = express.Router();
 
 //  create attendance controller and make default values
 router.post('/', atteController);
+
+// router will delete attendance ids
+router.get('/delete/:id', attendanceDelte);
 
 // get student details
 router.get('/student/:id', studentDetail);

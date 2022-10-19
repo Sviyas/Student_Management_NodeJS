@@ -12,6 +12,9 @@ exports.DepartmentList = async (req, res) => {
         condition: `d.id = ?`,
         value: [req.params.id]
       });
+      if (!listDep.length) {
+        return res.status(204);
+      }
       return res.status(200).json({
         result: true,
         staffs: listDep

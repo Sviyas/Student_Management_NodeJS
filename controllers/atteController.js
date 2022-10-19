@@ -1,3 +1,4 @@
+const { FAILED_DEPENDENCY } = require('http-status-codes');
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
@@ -16,6 +17,8 @@ exports.atteController = async (req, res) => {
           department_id: 1
         }
       });
+
+      if (!default_attend.length) return res.status(204);
       return res.status(201).json({
         result: true,
         message: 'Successfully added into database',
@@ -23,6 +26,28 @@ exports.atteController = async (req, res) => {
           id: default_attend.insertId,
           ...req.body
         }
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    if (err) throw err;
+  }
+};
+
+exports.attendanceDelte = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+    try {
+      const atteDel = await db.deleteOne(connection, {
+        table_name: 'attendance a',
+        condition: `a.id =?`,
+        value: [req.params.id]
+      });
+      if (!atteDel.length) return res.status(204);
+      return res.status(202).json({
+        result: true,
+        message: 'Attendance id is delete successfully'
       });
     } finally {
       connection.release();
@@ -45,6 +70,7 @@ exports.studentDetail = async (req, res) => {
         value: [req.params.id]
       });
 
+      if (!stud.length) return res.status(204);
       console.log(stud);
 
       return res.status(200).json({
@@ -95,6 +121,7 @@ exports.staffDetail = async (req, res) => {
         condition: `st.id =?`,
         value: [req.params.id]
       });
+      if (!staffList.length) return res.status(204);
       return res.status(200).json({
         result: true,
         staff: staffList
@@ -118,7 +145,7 @@ exports.deleteStaff = async (req, res) => {
         value: [req.params.id]
       });
 
-      return res.status(200).json({
+      return res.status(202).json({
         result: true,
         message: 'Staff Data has been Deleted Successfully'
       });

@@ -64,6 +64,8 @@ create table staff
   staff_name varchar(100),
   staff_role varchar(100),
   staff_sub_rol varchar(100),
+  staff_email varchar(100),  -- not in db  add it 
+  staff_passcode varchar(100),-- not in db
   staff_phone tinyint,
   attendance_id int not null,
   staff_attendance decimal(5,2) not null,
