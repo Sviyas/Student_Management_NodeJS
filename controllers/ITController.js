@@ -39,10 +39,8 @@ exports.studentDetail = async (req, res) => {
         condition: `s.id = ? `,
         value: [req.params.id]
       });
-
-      if (!stud.length) return res.status(204);
       console.log(stud);
-
+      if (!stud.length) return res.status(204);
       return res.status(200).json({
         result: true,
         student: stud
