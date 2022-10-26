@@ -6,6 +6,8 @@ create table it_team
   id int auto_increment,
   admin_name varchar(100),
   admin_passcode varchar(100),
+  student_id int, -- must be update
+  staff_id int,   -- must be update
 
   primary key(id)
 )

@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 
 // config env process
-require('dotenv').config();
+
+const { config } = require('dotenv');
+config();
 
 // console.log('config :', config()); // log inside config file
 // console.log('app :', app); // log app inside functions

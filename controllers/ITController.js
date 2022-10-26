@@ -40,7 +40,8 @@ exports.studentDetail = async (req, res) => {
         value: [req.params.id]
       });
       console.log(stud);
-      if (!stud.length) return res.status(204);
+      if (!stud.length) return res.status(204).json('not in db');
+
       return res.status(200).json({
         result: true,
         student: stud
@@ -89,7 +90,7 @@ exports.staffDetail = async (req, res) => {
         condition: `st.id =?`,
         value: [req.params.id]
       });
-      if (!staffList.length) return res.status(204);
+      if (staffList.length == 0) return res.status(204);
       return res.status(200).json({
         result: true,
         staff: staffList
