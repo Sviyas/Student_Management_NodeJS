@@ -6,9 +6,6 @@ const app = express();
 const { config } = require('dotenv');
 config();
 
-// console.log('config :', config()); // log inside config file
-// console.log('app :', app); // log app inside functions
-
 //  all routers files
 const index = require('./routes/index');
 const ITTeam = require('./routes/it');
