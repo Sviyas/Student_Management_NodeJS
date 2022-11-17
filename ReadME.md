@@ -1,5 +1,3 @@
-//STUDENT MANAGEMENT SYSTEM //
-
 -- It is used to Create a simple managing system for maintaing schools and managing students
 
 list of school classes and their role :
@@ -12,7 +10,7 @@ list of school classes and their role :
 --------------------------------------------------------------------------------------------:
 --------------------------------------------------------------------------------------------:
 
------------------------ School Management system ------------------------------;
+----------------------- School Management system -------------------------------------------;
 
 -- IT team manage the school students and staff
 -- when it needed to delete the student records, we can call the it team to delte student datas
