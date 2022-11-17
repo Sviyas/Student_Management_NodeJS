@@ -9,6 +9,6 @@
 
 ### env file
 .env
-.env*
+
 ### prettierc
-.prettierrc
+.prettierc

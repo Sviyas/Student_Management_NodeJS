@@ -1,0 +1,16 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-syntax-optional-chaining"],
+  "targets": {
+    "node": "15"
+  },
+  "env": {
+    "development": {
+      "sourceMaps": "inline",
+      "retainLines": true
+    },
+    "testing": {
+      "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
+    }
+  }
+}

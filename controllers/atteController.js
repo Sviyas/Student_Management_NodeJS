@@ -45,7 +45,7 @@ exports.attendanceDelte = async (req, res) => {
         condition: `a.id =?`,
         value: [req.params.id]
       });
-      if (!atteDel.length) return res.status(204);
+      if (!atteDel.length) return res.status(201);
       return res.status(202).json({
         result: true,
         message: 'Attendance id is delete successfully'
