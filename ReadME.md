@@ -1,21 +1,15 @@
--- It is used to Create a simple managing system for maintaing schools and managing students
+<div align="center">
+ <h1> STUDENT MANGEMENT SYSTEM</h1>
+</div>
 
-list of school classes and their role :
--- IT Team  
--- Department
--- Staff
--- Students
--- further will be added on future ✌️🤗🤩
+## Content
 
---------------------------------------------------------------------------------------------:
---------------------------------------------------------------------------------------------:
-
------------------------ School Management system -------------------------------------------;
-
--- IT team manage the school students and staff
--- when it needed to delete the student records, we can call the it team to delte student datas
--- same as it's perform on staff records
--- department will show the list of departments
--- attendance will show the department attendances
--- registering staff details and their primary subject
--- registering student details with their attendance
+- [0. Home page](#homepage-api)
+- [1. Login](#login-api)
+- [2. SignUp](#signup-api)
+- [3. student detail](#student-detail-api)
+- [4. staff detail](#staff-detail-api)
+- [5. Register Department](#Register-department-api)
+- [6. department detail](#department-detail-api)
+- [7. student account delete](#student-information-api)
+- [8. staff account delete](#staff-information-api)
