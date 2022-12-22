@@ -2,7 +2,7 @@ const { FAILED_DEPENDENCY } = require('http-status-codes');
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
-//  Register Attendance Table  on DB
+// ? Register Attendance Table  on DB
 exports.atteController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -35,7 +35,7 @@ exports.atteController = async (req, res) => {
   }
 };
 
-// this file will be use to delete attendance id in db
+// ? this file will be use to delete attendance id in db
 exports.attendanceDelte = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);

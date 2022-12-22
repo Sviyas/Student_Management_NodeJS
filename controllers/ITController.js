@@ -1,7 +1,7 @@
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
-//  view all department on IT_Team
+//  ? view all department on IT_Team
 exports.DepartmentList = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -13,7 +13,7 @@ exports.DepartmentList = async (req, res) => {
         value: [req.params.id]
       });
       if (!listDep.length) {
-        return res.status(204);
+        return res.status(204).json('Department ID is not valid');
       }
       return res.status(200).json({
         result: true,
@@ -27,7 +27,7 @@ exports.DepartmentList = async (req, res) => {
   }
 };
 
-//  get student details on DB
+// ? get student details on DB
 exports.studentDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -54,18 +54,19 @@ exports.studentDetail = async (req, res) => {
   }
 };
 
-//  delete student info on DB
+// ?  delete student info on DB
 exports.deleteStud = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
-      //  delete the data from db
-      await db.deleteOne(connection, {
+      // ? delete the data from db
+      const studDeleID = await db.deleteOne(connection, {
         table_name: 'student s',
         condition: `s.id = ? `,
         value: [req.params.id]
       });
 
+      if (!studDeleID.length) return res.status(411).json('Id must be valid');
       return res.status(202).json({
         result: true,
         message: 'Student data has been Deleted Successfully'
@@ -78,7 +79,7 @@ exports.deleteStud = async (req, res) => {
   }
 };
 
-// get staff info on DB
+// ? get staff info on DB
 exports.staffDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
@@ -103,7 +104,7 @@ exports.staffDetail = async (req, res) => {
   }
 };
 
-//  delete staff info DB
+// ?  delete staff info DB
 exports.deleteStaff = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);

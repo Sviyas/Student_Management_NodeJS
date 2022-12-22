@@ -2,14 +2,12 @@ const pool = require('../Database/config');
 const db = require('../Database/index');
 
 /**
- *
- * @Todo : create a department and alos registering on DB
- *
+ * ? @Todo :  create a department and alos registering on DB
  */
 
 exports.departmentRegister = async (req, res) => {
   try {
-    // get a pool connection
+    // ? get a pool connection
     const connection = await db.poolConnect(pool);
     try {
       const { dep_name, id } = req.body;

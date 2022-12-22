@@ -1,8 +1,7 @@
 /**
  *
  * @param {*} pool
- * @returns  list of all poolCoonection is used to indicate each condition performing similar tasks
- *            to save time and less code for this project
+ * @returns
  */
 
 //  get a pool connection
@@ -16,9 +15,9 @@ exports.poolConnect = pool => {
   });
 };
 
-// get a all data from given table
+// ? get a one data from given table
 exports.getOne = (connection, options) => {
-  console.log(options);
+  // console.log(options);
   return new Promise((resolve, reject) => {
     connection.query(
       `SELECT ${options.projection} FROM ${options.table_name} WHERE ${options.condition}`,
@@ -31,7 +30,7 @@ exports.getOne = (connection, options) => {
   });
 };
 
-//  inset a data to database
+// ? inset a data to database
 exports.insertOne = (connection, options) => {
   // console.log(options);
   return new Promise((resolve, reject) => {

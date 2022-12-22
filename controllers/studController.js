@@ -12,15 +12,15 @@ const bcrypt = require('bcrypt');
 exports.studController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
-    // console.log(connection);
+
     try {
       const { id, name, standard, email, phone, passcode, address, stud_sub, stud_attendance } = req.body;
 
-      // before save password , the password must be authenticate
+      // ? before save password , the password must be authenticate
       const salt = await bcrypt.genSalt(10);
-      // password in salting between 10 rounds
+      // ? password in salting between 10 rounds
       const myPassword = await bcrypt.hash(passcode, salt);
-      // hashing and storing password on db
+      // ? hashing and storing password on db
       const studRegister = await db.insertOne(connection, {
         table_name: 'student',
         data: {

@@ -7,7 +7,7 @@ const baseValidator = async (req, res, next, schema) => {
   } catch (err) {
     return res.status(403).json({
       result: false,
-      message: err.message
+      message: 'Validtor length must be valid'
     });
   }
 };

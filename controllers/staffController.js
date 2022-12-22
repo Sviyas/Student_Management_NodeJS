@@ -1,7 +1,7 @@
 const pool = require('../Database/config');
 const db = require('../Database/index');
 
-//  Register staff details on DB
+//  ? Register staff details on DB
 
 exports.staffController = async (req, res) => {
   try {
@@ -12,7 +12,6 @@ exports.staffController = async (req, res) => {
       const staffRegister = await db.insertOne(connection, {
         table_name: 'staff',
         data: {
-          id,
           staff_name,
           staff_role,
           staff_phone,

@@ -2,6 +2,8 @@ import baseValidator from '.';
 
 const Joi = require('Joi');
 
+// ? sign up validator
+
 export const signUpValidator = async (req, res, next) => {
   const userSchema = Joi.object({
     name: Joi.string().min(3).max(10).required(),
@@ -17,10 +19,11 @@ export const signUpValidator = async (req, res, next) => {
     stud_sub: Joi.string().required(),
     stud_attendance: Joi.number().required()
   });
-  // console.log('schema', userSchema);
+
   await baseValidator(req, res, next, userSchema);
 };
 
+// ? login validator
 export const loginValidator = async (req, res, next) => {
   const userSchema = Joi.object({
     email: Joi.string().min(3).max(50).required(),
