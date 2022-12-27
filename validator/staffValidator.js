@@ -1,4 +1,4 @@
-import baseValidator from '.';
+import baseValidator from './index';
 
 const Joi = require('Joi');
 

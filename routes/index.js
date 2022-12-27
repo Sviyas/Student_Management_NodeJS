@@ -1,10 +1,10 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+const index = express.Router();
 
-//  ? this welcome page of the website
-router.get('/', (req, res) => {
+//  ? Index Page of Student Management System
+index.get('/', (req, res) => {
   res.send('!...Welcome to Management System...!');
   console.log('using dashboard');
 });
 
-module.exports = router;
+export default index;

@@ -2,7 +2,7 @@
   "presets": ["@babel/preset-env"],
   "plugins": ["@babel/plugin-syntax-optional-chaining"],
   "targets": {
-    "node": "15"
+    "node": "current"
   },
   "env": {
     "development": {

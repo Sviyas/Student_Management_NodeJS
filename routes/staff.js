@@ -1,9 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const { staffController } = require('../controllers/staffController');
-const { staffValidator } = require('../validator/staffValidator');
+import express from 'express';
+import { staffController } from '../controllers/staffController';
+import { staffValidator } from '../validator/staffValidator';
 
-// ? Register staff details
-router.post('/Register', staffValidator, staffController);
+const staff = express.Router();
 
-module.exports = router;
+// ? Staff
+
+staff.post('/Register', staffValidator, staffController);
+staff.post('/Register/Login');
+
+export default staff;

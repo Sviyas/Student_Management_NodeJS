@@ -1,8 +1,10 @@
-const pool = require('../Database/config');
-const db = require('../Database/index');
+import pool from '../Database/config';
+import db from '../Database/index';
 
-//  ? view all department on IT_Team
-exports.DepartmentList = async (req, res) => {
+// ! Department api
+
+//  ? get one Department List
+export const DepartmentList = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
@@ -27,8 +29,82 @@ exports.DepartmentList = async (req, res) => {
   }
 };
 
-// ? get student details on DB
-exports.studentDetail = async (req, res) => {
+// ? Get All Department List
+export const listAllDepartment = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+    try {
+      const list_department = await db.getAll(connection, {
+        table_name: 'department',
+        projection: 'id, dep_name'
+      });
+
+      return res.status(200).json({
+        result: true,
+        message: 'Success',
+        data: list_department
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
+// ? delete department
+export const deletedepartment = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+
+    try {
+      const delete_depart = await db.deleteOne(connection, {
+        table_name: 'department',
+        condition: 'id = ?',
+        value: req.params.id
+      });
+
+      if (delete_depart.length === 0) res.status(401).json({ message: 'Department id is must valid' });
+
+      return res.status(200).json({
+        result: true,
+        message: 'delete Successfully'
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
+// ! Student api
+
+// ? get all student details
+export const listAllStudent = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+    try {
+      const list_student = await db.getAll(connection, {
+        table_name: 'student s',
+        projection: 's.id, s.name, s.stud_attendance'
+      });
+
+      return res.status(200).json({
+        result: true,
+        message: 'Success',
+        data: list_student
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
+// ? Get One Student Details
+export const studentDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
@@ -39,7 +115,7 @@ exports.studentDetail = async (req, res) => {
         condition: `s.id = ? `,
         value: [req.params.id]
       });
-      console.log(stud);
+      // console.log(stud);
       if (!stud.length) return res.status(403).json('This data has not been stored in Database ...😥');
 
       return res.status(200).json({
@@ -54,8 +130,8 @@ exports.studentDetail = async (req, res) => {
   }
 };
 
-// ?  delete student info on DB
-exports.deleteStud = async (req, res) => {
+// ? Delete One Student Detail
+export const deleteStud = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
@@ -79,8 +155,10 @@ exports.deleteStud = async (req, res) => {
   }
 };
 
-// ? get staff info on DB
-exports.staffDetail = async (req, res) => {
+// ! Staff api
+
+// ? Get One Staff Detail
+export const staffDetail = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
@@ -104,14 +182,38 @@ exports.staffDetail = async (req, res) => {
   }
 };
 
-// ?  delete staff info DB
-exports.deleteStaff = async (req, res) => {
+// ? Get all Staff details
+export const litstaff = async (req, res) => {
+  try {
+    const connection = await db.poolConnect(pool);
+
+    try {
+      const list_staff = await db.getAll(connection, {
+        table_name: 'staff',
+        projection: 'id, staff_name, staff_role'
+      });
+
+      return res.status(200).json({
+        result: true,
+        message: 'Staff List',
+        data: list_staff
+      });
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
+// ? Delete One Staff Detail
+export const deleteStaff = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
       await db.deleteOne(connection, {
-        table_name: 'staff sa',
-        condition: `sa.id = ? `,
+        table_name: 'staff',
+        condition: `id = ? `,
         value: [req.params.id]
       });
 

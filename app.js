@@ -1,23 +1,26 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+import cors from 'cors';
+import { config } from 'dotenv';
+import index from './routes/index';
+import student from './routes/student';
+import ITTeam from './routes/it';
+import attendance from './routes/attendance';
+import depart from './routes/department';
+import staff from './routes/staff';
 
-// config env process
-
-const { config } = require('dotenv');
+// ? set up env configuration
 config();
 
-//  all routers files
-const index = require('./routes/index');
-const ITTeam = require('./routes/it');
-const student = require('./routes/student');
-const attendance = require('./routes/attendance');
-const depart = require('./routes/department');
-const staff = require('./routes/staff');
+// ? setup app
+const app = express();
 
-// middleware
+// ? set multiple origin
+app.use(cors({ origin: '*', optionsSuccessStatus: 200 }));
+
+// ? middleware function for body parser
 app.use(express.json({ extended: true }));
 
-// api's
+// ? route file
 app.use('/school/dashboard', index);
 app.use('/school/IT', ITTeam);
 app.use('/school/department', depart);
@@ -25,7 +28,7 @@ app.use('/school/Attendance', attendance);
 app.use('/school/Student', student);
 app.use('/school/Staff', staff);
 
-// server listening the port
-app.listen(3000, () => {
+// ? server
+app.listen(process.env.PORT || 5000, () => {
   console.log('server Started ...!');
 });

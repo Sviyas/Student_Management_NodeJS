@@ -1,26 +1,21 @@
-// extract the mysql from in this page
-const pool = require('../Database/config');
-// get a connection from database
-const db = require('../Database/index');
-// using bcrypt to hashing and salting
-const bcrypt = require('bcrypt');
-/**
- *
- * @Todo : Register a student on DB
- *
- */
-exports.studController = async (req, res) => {
+import pool from '../Database/config';
+import db from '../Database/index';
+import bcrypt from 'bcrypt';
+
+// ? Register Student Information
+export const studController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
 
     try {
       const { id, name, standard, email, phone, passcode, address, stud_sub, stud_attendance } = req.body;
 
-      // ? before save password , the password must be authenticate
+      // ? authenticatee
       const salt = await bcrypt.genSalt(10);
-      // ? password in salting between 10 rounds
+
       const myPassword = await bcrypt.hash(passcode, salt);
-      // ? hashing and storing password on db
+      // ? hashing password
+
       const studRegister = await db.insertOne(connection, {
         table_name: 'student',
         data: {
@@ -53,7 +48,8 @@ exports.studController = async (req, res) => {
   }
 };
 
-exports.studLoginController = async (req, res) => {
+// ? Login api
+export const studLoginController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {

@@ -1,13 +1,9 @@
-const pool = require('../Database/config');
-const db = require('../Database/index');
+import pool from '../Database/config';
+import db from '../Database/index';
 
-/**
- * ? @Todo :  create a department and alos registering on DB
- */
-
-exports.departmentRegister = async (req, res) => {
+// ? Register Department
+export const departmentRegister = async (req, res) => {
   try {
-    // ? get a pool connection
     const connection = await db.poolConnect(pool);
     try {
       const { dep_name, id } = req.body;

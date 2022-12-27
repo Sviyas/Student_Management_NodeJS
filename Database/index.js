@@ -15,8 +15,14 @@ exports.poolConnect = pool => {
   });
 };
 
-// ? get a one data from given table
+/**
+ *
+ * @param {*} connection - create a connection
+ * @param {*} options - condtion to get the data
+ * @returns
+ */
 exports.getOne = (connection, options) => {
+  // console.log('options : ', options);
   // console.log(options);
   return new Promise((resolve, reject) => {
     connection.query(
@@ -55,10 +61,11 @@ exports.deleteOne = (connection, options) => {
 
 // this method is used to get all the data from database
 exports.getAll = (connection, options) => {
+  // console.log('options : ', options);
   return new Promise((resolve, reject) => {
-    connection.query(`SELECT ${options.projection} FROM ${options.table_names}`, (err, results) => {
+    connection.query(`SELECT ${options.projection} FROM ${options.table_name}`, (err, results) => {
       if (err) return reject(err);
-
+      // console.log('errorrrrrrrrrrr', err);
       return resolve(results);
     });
   });

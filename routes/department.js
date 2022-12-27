@@ -1,9 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const { departmentRegister } = require('../controllers/depController');
-const { departmentValidator } = require('../validator/deptValidator');
+import express from 'express';
+import { departmentRegister } from '../controllers/depController';
+import { departmentValidator } from '../validator/deptValidator';
 
-// ? register a department into database
-router.post('/Register', departmentValidator, departmentRegister);
+const depart = express.Router();
 
-module.exports = router;
+// ? Department
+
+depart.post('/Register', departmentValidator, departmentRegister);
+
+export default depart;

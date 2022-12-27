@@ -1,8 +1,10 @@
 /**
- * @TODO   connection creating on SQl
+ * @TODO connection creating on SQl
  */
 
-require('dotenv').config();
+// require('dotenv').config();
+import { config } from 'dotenv';
+config();
 
 const mysql = require('mysql');
 
@@ -11,7 +13,7 @@ const mysql = require('mysql');
  *
  */
 
-// extract the db values into env files
+// ?  extract the db values into env files
 const { DB_USERNAME, DB_PASSWORD, DB_PORT, DB_NAME } = process.env;
 
 const pool = mysql.createPool({

@@ -1,11 +1,12 @@
-const express = require('express');
-const { atteController, attendanceDelte } = require('../controllers/atteController');
-const router = express.Router();
+import express from 'express';
+import { atteController, attendanceDelte } from '../controllers/atteController';
 
-// ? create attendance controller and make default values
-router.post('/', atteController);
+const attendance = express.Router();
 
-// ?  router will delete attendance ids
-router.get('/delete/:id', attendanceDelte);
+// ? Attendence
 
-module.exports = router;
+attendance.post('/', atteController);
+
+attendance.get('/delete/:id', attendanceDelte);
+
+export default attendance;

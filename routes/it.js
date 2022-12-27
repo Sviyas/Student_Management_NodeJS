@@ -1,20 +1,32 @@
-const express = require('express');
-const { DepartmentList, studentDetail, deleteStud, staffDetail, deleteStaff } = require('../controllers/ITController');
-const router = express.Router();
+import express from 'express';
+import {
+  DepartmentList,
+  studentDetail,
+  deleteStud,
+  staffDetail,
+  deleteStaff,
+  listAllStudent,
+  listAllDepartment,
+  deletedepartment,
+  litstaff
+} from '../controllers/ITController';
 
-//  ?get the department list
-router.get('/department/:id', DepartmentList);
+const ITTeam = express.Router();
 
-// ? get student details
-router.get('/student/:id', studentDetail);
+// ! department
+ITTeam.get('/department/:id', DepartmentList);
+ITTeam.get('/department-list', listAllDepartment);
+ITTeam.get('/department-delete/:id', deletedepartment);
 
-// ?using attendance id to delete the student information
-router.get('/student/delete/:id', deleteStud);
+// ! student api
 
-//  ?using attendance id to show  staff details
-router.get('/staff/:id', staffDetail);
+ITTeam.get('/student/:id', studentDetail);
+ITTeam.get('/student/delete/:id', deleteStud);
+ITTeam.get('/list-student', listAllStudent);
 
-//?  using attendance id to delete the staff information
-router.get('/staff/delete/:id', deleteStaff);
+// ! Staff api
+ITTeam.get('/staff/:id', staffDetail);
+ITTeam.get('/staff/delete/:id', deleteStaff);
+ITTeam.get('/staff-list', litstaff);
 
-module.exports = router;
+export default ITTeam;

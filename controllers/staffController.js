@@ -1,13 +1,12 @@
-const pool = require('../Database/config');
-const db = require('../Database/index');
+import pool from '../Database/config';
+import db from '../Database/index';
 
-//  ? Register staff details on DB
-
-exports.staffController = async (req, res) => {
+//  ? Register staff details
+export const staffController = async (req, res) => {
   try {
     const connection = await db.poolConnect(pool);
     try {
-      const { id, staff_name, staff_role, staff_phone, staff_sub_role, staff_attendance } = req.body;
+      const { staff_name, staff_role, staff_phone, staff_sub_role, staff_attendance } = req.body;
 
       const staffRegister = await db.insertOne(connection, {
         table_name: 'staff',

@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import baseValidator from '.';
+import baseValidator from './index';
 
 export const departmentValidator = async (req, res, next) => {
   const departmentSchema = Joi.object({
