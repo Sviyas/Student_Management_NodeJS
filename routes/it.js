@@ -9,7 +9,7 @@ import {
   listAllDepartment,
   deletedepartment,
   litstaff
-} from '../controllers/ITController';
+} from '../Controllers/ITController';
 
 const ITTeam = express.Router();
 

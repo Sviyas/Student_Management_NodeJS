@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
+import morgan from 'morgan';
+import compression from 'compression';
+
 import index from './routes/index';
 import student from './routes/student';
 import ITTeam from './routes/it';
@@ -14,11 +17,29 @@ config();
 // ? setup app
 const app = express();
 
-// ? set multiple origin
-app.use(cors({ origin: '*', optionsSuccessStatus: 200 }));
+// ? set dev logger for better viewing response with optimization
+app.use(morgan('dev'));
 
-// ? middleware function for body parser
-app.use(express.json({ extended: true }));
+// ? compress all  responses
+async function shouldCompress(req, res) {
+  if (req.header['x-no-compression'] === true) {
+    return false;
+  }
+  // fallback to standard filter function
+  return compression.filter(req, res);
+}
+app.use(compression({ filter: shouldCompress }));
+
+// ? set up express response and body parser configuration
+app.use(express.json());
+
+// ? configure cors domain options
+app.use(
+  cors({
+    origin: '*',
+    optionsSuccessStatus: 200
+  })
+);
 
 // ? route file
 app.use('/school/dashboard', index);
@@ -28,7 +49,7 @@ app.use('/school/Attendance', attendance);
 app.use('/school/Student', student);
 app.use('/school/Staff', staff);
 
-// ? server
+// ? server listening
 app.listen(process.env.PORT || 5000, () => {
   console.log('server Started ...!');
 });

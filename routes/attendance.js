@@ -1,5 +1,5 @@
 import express from 'express';
-import { atteController, attendanceDelte } from '../controllers/atteController';
+import { atteController, attendanceDelte } from '../Controllers/atteController';
 
 const attendance = express.Router();
 

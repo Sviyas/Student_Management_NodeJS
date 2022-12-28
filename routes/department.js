@@ -1,5 +1,5 @@
 import express from 'express';
-import { departmentRegister } from '../controllers/depController';
+import { departmentRegister } from '../Controllers/depController';
 import { departmentValidator } from '../validator/deptValidator';
 
 const depart = express.Router();

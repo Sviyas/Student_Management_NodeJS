@@ -1,5 +1,5 @@
 import express from 'express';
-import { staffController } from '../controllers/staffController';
+import { staffController } from '../Controllers/staffController';
 import { staffValidator } from '../validator/staffValidator';
 
 const staff = express.Router();
