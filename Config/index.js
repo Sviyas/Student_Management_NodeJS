@@ -31,7 +31,7 @@ const logger = createLogger({
   ),
   transports: [
     new transports.File({
-      filename: 'logs/logs.log'
+      filename: 'logs/info.log'
     }),
     new transports.File({
       filename: 'logs/errors.log',
