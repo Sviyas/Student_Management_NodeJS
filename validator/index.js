@@ -1,8 +1,16 @@
+/**
+ *
+ * @param {*} req - request
+ * @param {*} res - response
+ * @param {*} next - next Function middleware
+ * @param {*} schema - Object Query Schema
+ * @returns
+ */
 const baseValidator = async (req, res, next, schema) => {
   try {
     const value = await schema.validateAsync(req.body);
 
-    console.log('schema identifer', value);
+    // console.log('schema identifer', value);
     next();
   } catch (err) {
     const errror = JSON.parse(JSON.stringify(err.message));

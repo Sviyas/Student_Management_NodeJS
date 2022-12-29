@@ -26,7 +26,7 @@ try {
   logger.info('MySql Database Connected');
 } catch (err) {
   // ? db error
-  logger.info({ message: 'Database Not Connected !', level: 'error', error: err });
+  logger.error('Database Not Connected !');
 }
 
 module.exports = pool;
