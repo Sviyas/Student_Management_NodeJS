@@ -1,0 +1,420 @@
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:56:52'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:56:52'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:57:06'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:57:06'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:57:25'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:57:26'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:58:17'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 09:58:17'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 10:07:27'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: undefined,
+  timestamp: 'Dec-29-2022 10:07:27'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:04'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:04'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:16'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:16'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:39'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:14:39'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:15:15'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:15:15'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:16:01'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:16:02'
+}
+{
+  message: ' Database Connected',
+  label: 'winston custom format',
+  level: 'info',
+  timestamp: 'Dec-29-2022 10:17:14'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:17:14'
+}
+{
+  level: 'info',
+  message: ' Database Connected',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:00'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:00'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:26'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:26'
+}
+{
+  level: 'info',
+  message: 'MySql Database Connected',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:50'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:18:50'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:19:00'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:19:00'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:23:50'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:23:50'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:24:47'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:24:48'
+}
+{
+  message: 'MySql Database Connected',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:25:25'
+}
+{
+  message: 'Server running on 5000',
+  level: 'info',
+  label: 'winston custom format',
+  timestamp: 'Dec-29-2022 10:25:25'
+}
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'winston custom format',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:25:48'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'winston custom format',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:25:49'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:18'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:18'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:47'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:47'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:56'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:29:57'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:15'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'Local',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:15'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:34'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:34'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:41'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:41'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:55'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:30:55'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:00'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:00'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:06'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:06'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:21'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:21'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:43'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:33:43'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:34:08'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:34:08'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:35:11'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:35:11'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:36:18'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:36:18'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:37:06'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:37:06'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'MySql Database Connected',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:40:37'[23m[39m
+[34m[3m}[23m[39m
+[34m[3m{[23m[39m
+[34m[3m  message: 'Server running on 5000',[23m[39m
+[34m[3m  level: 'info',[23m[39m
+[34m[3m  label: 'DEVELOPMENT',[23m[39m
+[34m[3m  timestamp: 'Dec-29-2022 10:40:37'[23m[39m
+[34m[3m}[23m[39m

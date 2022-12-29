@@ -1,10 +1,8 @@
 /**
  *
- * @param {*} pool
+ * @param {*} pool - Create a Pool Connection
  * @returns
  */
-
-//  get a pool connection
 exports.poolConnect = pool => {
   // console.log('Database running....');
   return new Promise((resolve, reject) => {
@@ -17,9 +15,9 @@ exports.poolConnect = pool => {
 
 /**
  *
- * @param {*} connection - create a connection
- * @param {*} options - condtion to get the data
- * @returns
+ * @param {*} connection - connection
+ * @param {*} options - Projection
+ * @description - Get One Field on Data
  */
 exports.getOne = (connection, options) => {
   // console.log('options : ', options);
@@ -36,7 +34,12 @@ exports.getOne = (connection, options) => {
   });
 };
 
-// ? inset a data to database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - Insert One Field on Data
+ */
 exports.insertOne = (connection, options) => {
   // console.log(options);
   return new Promise((resolve, reject) => {
@@ -47,7 +50,12 @@ exports.insertOne = (connection, options) => {
   });
 };
 
-//  Delete the data into database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - Delete One Field
+ */
 exports.deleteOne = (connection, options) => {
   // console.log(options);
   return new Promise((resolve, reject) => {
@@ -59,7 +67,12 @@ exports.deleteOne = (connection, options) => {
   });
 };
 
-// this method is used to get all the data from database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description  - Get All Data
+ */
 exports.getAll = (connection, options) => {
   // console.log('options : ', options);
   return new Promise((resolve, reject) => {
@@ -71,7 +84,12 @@ exports.getAll = (connection, options) => {
   });
 };
 
-//  this method is used to get multiple all the data from database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - get multiple Data
+ */
 exports.getMulti = (connection, options) => {
   return new Promise((resolve, reject) => {
     connection.query(
@@ -85,7 +103,12 @@ exports.getMulti = (connection, options) => {
   });
 };
 
-//  this method is used to update from the database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - update one field
+ */
 exports.updateOne = (connection, options) => {
   return new Promise((resolve, reject) => {
     connection.query(
@@ -101,7 +124,12 @@ exports.updateOne = (connection, options) => {
   });
 };
 
-// this method is used to update multiple condition on database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - update by multiple conditions
+ */
 exports.updateByMultipleCondition = (connection, options) => {
   return new Promise((resolve, reject) => {
     connection.query(
@@ -117,7 +145,12 @@ exports.updateByMultipleCondition = (connection, options) => {
   });
 };
 
-//  this method is used to check foreign key
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - Update Foreign Key Mode
+ */
 exports.foreignKeyMode = (connection, mode) => {
   return new Promise((resolve, reject) => {
     connection.query(`SET FOREIGN_KEY_CHECKS = ?`, mode, err => {
@@ -129,14 +162,18 @@ exports.foreignKeyMode = (connection, mode) => {
   });
 };
 
-//  this method is used to insert into multiple data to database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - Insert Multiple Data
+ */
 exports.insertIntoMultiData = (connection, options) => {
   return new Promise((resolve, reject) => {
     const baseQ = `INSERT INTO SET ? ; `;
 
     let genQ = baseQ.repeat(options.data.length);
 
-    // genQ = replaceAll(genQ, 'INSERT INTO ?', `INSERT INTO ${options.table_name}`);
     genQ = genQ.replace(/INSERT INTO/g, `INSERT INTO ${options.table_name}`);
 
     // Make an multiple query at a time
@@ -154,7 +191,12 @@ exports.insertIntoMultiData = (connection, options) => {
   });
 };
 
-//  this method is used to insert multiple table in to database
+/**
+ *
+ * @param {*} connection - Connection
+ * @param {*} options - projection
+ * @description - Insert into Multiple Table
+ */
 exports.insertIntoMultiTables = (connection, options) => {
   return new Promise((resolve, reject) => {
     const baseQ = `INSERT INTO ? SET ? ; `;

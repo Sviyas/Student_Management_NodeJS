@@ -10,6 +10,7 @@ import ITTeam from './routes/it';
 import attendance from './routes/attendance';
 import depart from './routes/department';
 import staff from './routes/staff';
+import logger from './Config';
 
 // ? set up env configuration
 config();
@@ -51,5 +52,6 @@ app.use('/school/Staff', staff);
 
 // ? server listening
 app.listen(process.env.PORT || 5000, () => {
-  console.log('server Started ...!');
+  // console.log('server Started ...!');
+  logger.info(`Server running on ${process.env.PORT}`);
 });
