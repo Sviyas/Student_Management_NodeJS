@@ -2,16 +2,16 @@
  * @description - ExtendableError Base Class
  */
 class ExtendableError extends Error {
-  isReligion;
+  isRelogin;
 
-  constructor(message, isReligion = false) {
+  constructor(message, isRelogin = false) {
     if (new.target === ExtendableError) {
       throw new 'Abstract class "ExtendableErro" cannot be insantiated directly'();
     }
 
     super(message);
     this.name = this.constructor.name;
-    this.isReligion = isReligion;
+    this.isRelogin = isRelogin;
     this.message = message;
 
     // ? Prototype

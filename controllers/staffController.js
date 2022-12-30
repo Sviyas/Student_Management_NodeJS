@@ -31,6 +31,6 @@ export const staffController = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };

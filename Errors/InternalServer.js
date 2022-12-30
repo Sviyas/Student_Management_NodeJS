@@ -13,3 +13,5 @@ class InternalServerError extends ExtendableError {
     Object.setPrototypeOf(this, InternalServerError.prototype);
   }
 }
+
+export { InternalServerError };

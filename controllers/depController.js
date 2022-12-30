@@ -1,5 +1,6 @@
 import pool from '../Database/config';
 import db from '../Database/index';
+import errorHandleMangeer from '../Errors';
 
 // ? Register Department
 export const departmentRegister = async (req, res) => {
@@ -29,6 +30,6 @@ export const departmentRegister = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };

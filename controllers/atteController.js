@@ -1,5 +1,6 @@
 import pool from '../Database/config';
 import db from '../Database/index';
+import errorHandleMangeer from '../Errors';
 
 // ? Register Attendance table
 export const atteController = async (req, res) => {
@@ -29,7 +30,7 @@ export const atteController = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -52,6 +53,6 @@ export const attendanceDelte = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };

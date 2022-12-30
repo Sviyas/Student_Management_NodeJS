@@ -1,5 +1,6 @@
 import pool from '../Database/config';
 import db from '../Database/index';
+import errorHandleMangeer from '../Errors';
 
 // ! Department api
 
@@ -25,7 +26,7 @@ export const DepartmentList = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -48,7 +49,7 @@ export const listAllDepartment = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -74,7 +75,7 @@ export const deletedepartment = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -99,7 +100,7 @@ export const listAllStudent = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -126,7 +127,7 @@ export const studentDetail = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -151,7 +152,7 @@ export const deleteStud = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -178,7 +179,7 @@ export const staffDetail = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -202,7 +203,7 @@ export const litstaff = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -225,6 +226,6 @@ export const deleteStaff = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };

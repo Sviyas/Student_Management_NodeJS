@@ -44,7 +44,7 @@ export const studController = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) throw err;
+    return errorHandleMangeer(err, res);
   }
 };
 
@@ -85,8 +85,6 @@ export const studLoginController = async (req, res) => {
       connection.release();
     }
   } catch (err) {
-    if (err) {
-      throw err;
-    }
+    return errorHandleMangeer(err, res);
   }
 };
