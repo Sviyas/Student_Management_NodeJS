@@ -52,6 +52,5 @@ app.use('/school/Staff', staff);
 
 // ? server listening
 app.listen(process.env.PORT || 5000, () => {
-  // console.log('server Started ...!');
   logger.info(`Server running on ${process.env.PORT}`);
 });
